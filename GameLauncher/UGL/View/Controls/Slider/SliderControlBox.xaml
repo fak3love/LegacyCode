@@ -1,0 +1,24 @@
+﻿<Border x:Class="UGL.View.Controls.Slider.SliderControlBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UGL.View.Controls.Slider" xmlns:controls="clr-namespace:UGL.View.Controls" xmlns:circleitem_="clr-namespace:UGL.ViewModel.CircleItem_" xmlns:slider_="clr-namespace:UGL.ViewModel.Slider_"
+        mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="80">
+    <Border.DataContext>
+        <slider_:SliderControlBoxViewModel/>
+    </Border.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button VerticalAlignment="Center" Width="40" Height="40" Style="{DynamicResource buttonBurgerMenuStyle}" Command="{Binding SliderBoxViewModel.ShowPanelCommand}" CommandParameter="{Binding SliderBox}"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" Padding="0, 5">
+            <StackPanel HorizontalAlignment="Left">
+                <ItemsControl Width="80" ItemsSource="{Binding SliderBoxViewModel.AllCircleServers}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Border>

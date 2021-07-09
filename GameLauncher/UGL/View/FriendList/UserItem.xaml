@@ -1,0 +1,44 @@
+﻿<Border x:Class="UGL.View.FriendList.UserItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UGL.View.FriendList"
+             xmlns:controls="clr-namespace:UGL.View.Controls"
+             xmlns:friendlist_="clr-namespace:UGL.ViewModel.FriendList_"
+             mc:Ignorable="d"
+             d:DesignHeight="80">
+    <Border.DataContext>
+        <friendlist_:UserItemViewModel/>
+    </Border.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" Width="45" Height="45" CornerRadius="100" Margin="10">
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border
+                    Background="Black"
+                    CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource FindAncestor, AncestorType=Border}}"
+                    Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=Border}}"
+                    Height="{Binding ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType=Border}}"
+                    />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+            <Image Source="{Binding UserItem.LogoSource}"/>
+        </Border>
+        <Ellipse Grid.Column="1" Margin="10" Width="45" Height="45" StrokeThickness="2">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="{Binding UserItem.StatusColor}"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <TextBlock Grid.Column="3" Text="{Binding UserItem.NickName}" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="DemiBold" FontSize="20"/>
+    </Grid>
+</Border>

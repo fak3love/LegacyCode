@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UGL.View.Collection">
+    <Color x:Key="OnlineColor">#2FC83E</Color>
+    <Color x:Key="OfflineColor">#C22023</Color>
+    <Color x:Key="PatchPendingColor">#FFCF24</Color>
+    <Color x:Key="BusyColor">#8B1B1E</Color>
+    <Color x:Key="AwayColor">#CB860E</Color>
+    <Color x:Key="AppGrayColor">#2F3136</Color>
+    <Color x:Key="AppDarkGrayColor">#1E2023</Color>
+    <Color x:Key="AppBlackColor">#1A1B1E</Color>
+    <Color x:Key="AppFontColor">GhostWhite</Color>
+    <Color x:Key="AppFontSilverColor">Silver</Color>
+    
+</ResourceDictionary>
