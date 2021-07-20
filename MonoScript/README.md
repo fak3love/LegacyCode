@@ -1,7 +1,7 @@
 # MonoScript
 MonoScript is a simple, interpreted programming language.
 
-More information [here](https://github.com/faust8king/MonoScript/wiki).
+More information [here](https://neteromode/LegacyCode/edit/master/MonoScript/wiki).
 
 # Syntax
 
