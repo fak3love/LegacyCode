@@ -1,8 +1,6 @@
 # MonoScript
 MonoScript is a simple, interpreted programming language.
 
-More information [here](https://github.com/neteromode/LegacyCode/edit/master/MonoScript/wiki).
-
 # Syntax
 
 > **Comments**
